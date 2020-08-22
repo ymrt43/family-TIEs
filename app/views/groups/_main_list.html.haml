@@ -4,19 +4,8 @@
       ○がつ○にち○ようび
       %br/
       なにを やってみる？
-    %ul.Tasks__list
-      %li.Tasks__card
-        = link_to "###", class: "TaskCard" do
-          card1
-      %li.Tasks__card
-        = link_to "###", class: "TaskCard" do
-          card2
-      %li.Tasks__card
-        = link_to "###", class: "TaskCard" do
-          card3
-      %li.Tasks__card
-        = link_to "###", class: "TaskCard" do
-          card4
-      %li.Tasks__card
-        = link_to "###", class: "TaskCard" do
-          card5
+    .Tasks__list
+      - @groups.each do |group|
+        = link_to group_tasks_path(group), class: "TaskCard" do
+          .Tasks__card
+            = group.name
