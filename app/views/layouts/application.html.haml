@@ -14,6 +14,6 @@
           =link_to "family TIEs", "/",class: "Logo__btn"
         .User
           =link_to "###", class: "User__info" do
-            =icon('fas', 'user-circle', class: "Contents__icon")
-            ゆいかちゃん
+            = icon('fas', 'user-circle', class: "Contents__icon")
+            = current_user.nickname
     = yield
