@@ -2,10 +2,18 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title FamilyTies
+    %title 【子育て支援】FamilyTies-Todoタイマー ~TakeItEasy!~
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    %header.Header
+      .Header__bar
+        %h1.Logo
+          =link_to "family TIEs", "/",class: "Logo__btn"
+        .User
+          =link_to "###", class: "User__info" do
+            =icon('fas', 'user-circle', class: "Contents__icon")
+            ゆいかちゃん
     = yield

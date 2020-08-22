@@ -1,3 +1,56 @@
 * {
   box-sizing: border-box;
 }
+
+.wrapper {
+  display: flex;
+  height: calc(100vh - 80px);
+}
+
+.MenuBar {
+  background-color: #132d66;
+  width: 60px;
+  position: relative;
+}
+
+.MenuLists {
+  position: absolute;
+  bottom: 10px;
+  margin: 0px 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.MenuList {
+  margin-bottom: 35px;
+  &__icon {
+    color: #ffffff;
+    text-decoration: none;
+  }
+}
+
+.MainArea {
+  background-color: #FFC93C;
+  width: calc(100vw - 60px);
+}
+
+.Tasks {
+  width: 500px;
+  margin: 0 auto;
+  &__message {
+    color: #204495;
+    text-align: center;
+    font-size: 25px;
+    padding: 10px 0;
+    background-color: gray;
+    height: 100px;
+    line-height: 40px;
+  }
+  &__card {
+    text-align: center;
+    background-color: gray;
+    height: 100px;
+    padding: 10px 0;
+    margin-top: 10px;
+  }
+}

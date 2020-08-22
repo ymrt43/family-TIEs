@@ -1,0 +1,45 @@
+body {
+  font-family: 'Hannotate SC','Arial','メイリオ', Meiryo,'ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  background-color: #204495;
+}
+
+.Header__bar {
+  margin: 0px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Logo {
+  &__btn {
+    text-decoration: none;
+    line-height: 80px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 45px;
+    text-shadow: 1px 1px 2px silver;
+    background: linear-gradient(transparent 95%, yellow 95%);
+  }
+}
+
+.User {
+  border-radius: 10px;
+  background-color: #6495ED;
+  line-height: 30px;
+  margin: 25px 0;
+  padding: 0 10px;
+  &__info {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 15px;
+  }
+}
+
+.Contents__icon {
+  margin-right: 5px;
+}
