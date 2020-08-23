@@ -1,1 +1,10 @@
-.ToDos
+.TasksField
+  .Tasks
+    .Tasks__info
+      .Tasks__time
+        = icon('fas', 'stopwatch', class: "Contents__icon")
+        = Time.current.strftime("%I:%M:%S")
+      .Tasks__group
+        = @group.name
+    .TaskField
+      = render @tasks
