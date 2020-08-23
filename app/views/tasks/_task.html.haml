@@ -1,0 +1,11 @@
+.Tasks__card
+  .Tasks__contents
+    .Tasks__startTime
+      %span.under
+        = task.start_at.strftime("%l:%M")
+    .Tasks__content
+      %p.Tasks__name
+        = task.name
+      = image_tag task.image.url, class: 'Tasks__image' if task.image.present?
+    .Tasks__timer
+      = task.duration
