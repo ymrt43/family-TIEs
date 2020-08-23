@@ -1,4 +1,86 @@
-.ToDos{
+.TasksField {
   background-color: #FFC93C;
-  height: calc(100vh - 80px);
+  height: 100%;
+  width: 100%;
+  padding-top: 30px;
+}
+
+.Tasks {
+  margin: 0 auto;
+  width: 650px;
+  &__info {
+    color: #204495;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+  }
+  &__time {
+    margin-right: 30px;
+  }
+  &__card {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #204495;
+    border-left: solid 5px #132d66;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+    height: 400px;
+  }
+  &__contents {
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    height: 380px;
+  }
+  &__startTime {
+    padding-top: 15px;
+    text-align: center;
+    width: 80px;
+  }
+  &__image {
+  }
+  &__content {
+    width: 350px;
+    background: darkblue;
+    padding: 10px;
+    text-align: center;
+  }
+  &__timer {
+    text-align: center;
+    width: 220px;
+    background: darkgrey;
+  }
+}
+
+.under {
+  background: linear-gradient(transparent 20%, #a8eaff 50%);
+
+}
+
+.timer, .timer-done, .timer-loop {
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
+  padding: 10px;
+}
+
+// These are the default CSS classes
+// used by this plugin. Use these values
+// for a basic style to get started.
+.jst-hours {
+  float: left;
+}
+.jst-minutes {
+  float: left;
+}
+.jst-seconds {
+  float: left;
+}
+.jst-clearDiv {
+  clear: both;
+}
+.jst-timeout {
+  color: red;
 }
