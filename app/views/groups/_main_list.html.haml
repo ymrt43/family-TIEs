@@ -1,11 +1,12 @@
 .MainArea
-  .Tasks
-    .Tasks__message
-      ○がつ○にち○ようび
+  .Groups
+    .Groups__message
+      = Time.current.strftime("%Yねん%-mがつ%-dにち")
       %br/
       なにを やってみる？
-    .Tasks__list
+    .Groups__list
       - @groups.each do |group|
-        = link_to group_tasks_path(group), class: "TaskCard" do
-          .Tasks__card
-            = group.name
+        = link_to group_tasks_path(group), class: "GroupCard" do
+          .Groups__card
+            %p.Groups__content
+              = group.name
