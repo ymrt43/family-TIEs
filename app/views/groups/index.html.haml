@@ -1,3 +1,16 @@
-.wrapper
-  = render "side_bar"
-  = render "main_list"
+.MainArea
+  .Groups
+    .Groups__message
+      = Time.current.strftime("%Yねん%-mがつ%-dにち")
+      %br/
+      なにを やってみる？
+    .Groups__list
+      - @groups.each do |group|
+        = link_to group_tasks_path(group), class: "GroupCard" do
+          .Groups__card
+            .Groups__content
+              = group.name
+
+    .Buttons
+      =link_to new_group_path, class: "Button__icon" do
+        = icon('fas', 'plus', class: "Contents__icon--plus")

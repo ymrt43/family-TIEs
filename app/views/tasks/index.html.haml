@@ -1,10 +1,16 @@
-.TasksField
+.MainArea
   .Tasks
     .Tasks__info
       .Tasks__time
         = icon('fas', 'stopwatch', class: "Contents__icon")
-        = Time.current.strftime("%I:%M:%S")
+        /= Time.current.strftime("%I:%M")
+        %span#timer_now
       .Tasks__group
         = @group.name
     .TaskField
       = render @tasks
+  .Buttons
+    =link_to new_group_task_path, class: "Button__icon" do
+      = icon('fas', 'plus', class: "Contents__icon--plus")
+    = link_to edit_group_path(@group), class:"Button__icon" do
+      = icon('fas', 'edit', class: "Contents__icon--plus")

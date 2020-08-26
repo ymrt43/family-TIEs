@@ -1,0 +1,12 @@
+.MainArea
+  .SettingGroup
+    .SettingGroup__message
+      %pチャレンジをすこしかえてみる？
+      %pくふうしてみよう！！
+    .SettingGroup__form
+      = form_with model: @group, local: true do |f|
+        = f.text_field :name, class: "SettingGroup__input", placeholder: "チャレンジすることは？"
+        = f.submit "JUST TRY！", class: "SettingGroup__button Btn__blue"
+      = link_to group_path(@group.id), method: :delete do
+        .SettingGroup__button.Btn__orange
+          %p DELETE

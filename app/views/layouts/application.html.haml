@@ -5,6 +5,7 @@
     %title 【子育て支援】FamilyTies-Todoタイマー ~TakeItEasy!~
     = csrf_meta_tags
     = csp_meta_tag
+    %script{ src: "http://code.jquery.com/jquery-1.10.2.min.js" }
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application'
   %body
@@ -13,7 +14,7 @@
         %h1.Logo
           =link_to "family TIEs", "/",class: "Logo__btn"
         .User
-          =link_to "###", class: "User__info" do
-            = icon('fas', 'user-circle', class: "Contents__icon")
+          =link_to edit_user_path(current_user), class: "User__info" do
+            = icon('fas', 'user-circle', class: "Contents__icon--user")
             = current_user.nickname
     = yield

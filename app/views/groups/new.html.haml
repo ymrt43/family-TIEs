@@ -1,0 +1,9 @@
+.MainArea
+  .SettingGroup
+    .SettingGroup__message
+      %pチャレンジしてみたいことはある？
+      %pとうろくしよう！！
+    .SettingGroup__form
+      = form_with model: @group, local: true do |f|
+        = f.text_field :name, class: "SettingGroup__input", placeholder: "チャレンジすることは？"
+        = f.submit "JUST TRY！", class: "SettingGroup__button Btn__blue"

@@ -1,49 +1,53 @@
-.TasksField {
-  background-color: #FFC93C;
-  height: 100%;
-  width: 100%;
-  padding-top: 30px;
-}
-
 .Tasks {
   margin: 0 auto;
+  padding-top: 30px;
   width: 650px;
+  height: 100px;
   &__info {
     color: #204495;
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 10px;
     margin-bottom: 20px;
-    font-weight: bold;
     display: flex;
     justify-content: center;
+    line-height: 40px;
+    letter-spacing: 0.2em;
+
   }
   &__time {
-    margin-right: 30px;
+    width: 200px;
   }
+  &__group {
+    text-align: center;
+    width: 350px;
+    overflow: scroll;
+
+  }
+
   &__card {
+    width: 650px;
     padding: 0.5em 1em;
     margin: 2em 0;
     color: #204495;
     border-left: solid 5px #132d66;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
-    height: 400px;
   }
   &__contents {
     display: flex;
     justify-content: space-around;
     font-size: 20px;
-    height: 380px;
+    letter-spacing: 0.1em;
   }
   &__startTime {
-    padding-top: 15px;
-    text-align: center;
     width: 80px;
+    padding-top: 10px;
+    padding-left: 10px;
   }
   &__image {
+    height: 250px;
   }
   &__content {
     width: 350px;
-    background: darkblue;
     padding: 10px;
     text-align: center;
   }
@@ -51,36 +55,35 @@
     text-align: center;
     width: 220px;
     background: darkgrey;
+    padding-top: 10px;
+  }
+}
+
+.Buttons {
+  position: fixed;
+  right: 12px;
+  bottom: 15px;
+}
+.Button__icon {
+  margin-top: 10px;
+  display: block;
+  width: 56px;
+  height: 56px;
+  text-decoration: none;
+  background-color: #204495;
+  font-size: 18px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 58px;
+  transition: .3s;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.12), 0 2px 2px 0 rgba(0,0,0,.24);
+  color: #ffffff;
+  &:hover {
+    box-shadow: 0 5px 6px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
   }
 }
 
 .under {
   background: linear-gradient(transparent 20%, #a8eaff 50%);
 
-}
-
-.timer, .timer-done, .timer-loop {
-  font-size: 30px;
-  color: black;
-  font-weight: bold;
-  padding: 10px;
-}
-
-// These are the default CSS classes
-// used by this plugin. Use these values
-// for a basic style to get started.
-.jst-hours {
-  float: left;
-}
-.jst-minutes {
-  float: left;
-}
-.jst-seconds {
-  float: left;
-}
-.jst-clearDiv {
-  clear: both;
-}
-.jst-timeout {
-  color: red;
 }
