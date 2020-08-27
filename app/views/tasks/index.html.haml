@@ -3,8 +3,7 @@
     .Tasks__info
       .Tasks__time
         = icon('fas', 'stopwatch', class: "Contents__icon")
-        /= Time.current.strftime("%I:%M")
-        %span#timer_now
+        /= Time.current.strftime("%Yねん%-mがつ%-dにち")
       .Tasks__group
         = @group.name
     .TaskField

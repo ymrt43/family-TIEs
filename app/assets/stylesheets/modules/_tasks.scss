@@ -40,7 +40,7 @@
   }
   &__startTime {
     width: 80px;
-    padding-top: 10px;
+    padding-top: 20px;
     padding-left: 10px;
   }
   &__image {
@@ -48,14 +48,23 @@
   }
   &__content {
     width: 350px;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
   }
   &__timer {
-    text-align: center;
-    width: 220px;
-    background: darkgrey;
-    padding-top: 10px;
+    width: 180px;
+    display: flex;
+    &--moving {
+      line-height: 100px;
+      font-size: 30px;
+    }
+    &--btns {
+      font-size: 10px;
+      height: 100px;
+      line-height: 30px;
+      padding: 5px 0;
+      margin: 0 10px 0 30px;
+    }
   }
 }
 
@@ -86,4 +95,15 @@
 .under {
   background: linear-gradient(transparent 20%, #a8eaff 50%);
 
+}
+
+button.TimerBtn {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 60px;
+  height: 30px;
+  border: 0;
+  border-radius: 0;
+  background-color: #204495;
 }
