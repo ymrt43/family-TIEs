@@ -2,7 +2,6 @@
   margin: 0 auto;
   padding-top: 30px;
   width: 650px;
-  height: 100px;
   &__info {
     color: #204495;
     font-size: 20px;
@@ -12,18 +11,16 @@
     justify-content: center;
     line-height: 40px;
     letter-spacing: 0.2em;
-
   }
   &__time {
-    width: 200px;
+    text-align: right;
+    width: 80px;
   }
   &__group {
-    text-align: center;
+    text-align: left;
     width: 350px;
     overflow: scroll;
-
   }
-
   &__card {
     width: 650px;
     padding: 0.5em 1em;
@@ -51,19 +48,16 @@
     padding: 20px;
     text-align: center;
   }
+  &__edit {
+    text-decoration: underline dotted #FF5722;
+    color: #204495;
+    font-weight: bold;
+  }
   &__timer {
     width: 180px;
-    display: flex;
     &--moving {
-      line-height: 100px;
-      font-size: 30px;
     }
-    &--btns {
-      font-size: 10px;
-      height: 100px;
-      line-height: 30px;
-      padding: 5px 0;
-      margin: 0 10px 0 30px;
+    &--btn {
     }
   }
 }
@@ -95,5 +89,51 @@
 .under {
   background: linear-gradient(transparent 20%, #a8eaff 50%);
 
+}
+
+.SettingTask {
+  width: 450px;
+  text-align: center;
+  padding-top: 50px;
+  margin: 0 auto;
+  height: 500px;
+  &__message {
+    font-size: 20px;
+    color: #2e2e2e;
+    font-weight: bold;
+    padding: 20px 0;
+    line-height: 2;
+    letter-spacing: 0.1em;
+  }
+  &__form {
+    margin-top: 15px;
+  }
+  &__input {
+    width: 100%;
+    line-height: 50px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 0;
+    margin-bottom: 5px;
+  }
+  &__button {
+    margin-top: 10px;
+    display: inline-block;
+    border: 0;
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
+  }
+  &__button:active {
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);/*沈むように*/
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+  }
 }
 
