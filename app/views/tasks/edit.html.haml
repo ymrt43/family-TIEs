@@ -1,0 +1,15 @@
+.MainArea
+  .SettingTask
+    .SettingTask__message
+      = @task.name
+      %pなんじになにをするか
+      %pくふうしてみる？
+    .SettingTask__form
+      = form_with model: [@group, @task], local: true do |f|
+        = f.text_field :start_at, class: "SettingTask__input", placeholder: "なんじからする？(例) 07:00"
+        = f.text_field :name, class: "SettingTask__input", placeholder: "やることはなにかな？"
+        = f.text_field :duration, class: "SettingTask__input", placeholder: "なんふんでできるかな？(例) 3分→3"
+        = f.submit "JUST TRY！", class: "SettingTask__button Btn__blue"
+      = link_to "/groups/#{@group.id}/tasks/#{@task.id}", method: :delete do
+        .SettingTask__button.Btn__orange
+          %p DELETE
