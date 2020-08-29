@@ -7,7 +7,25 @@
       .Tasks__group
         = @group.name
     .TaskField
-      = render @tasks
+      - @tasks.each do |task|
+        .Tasks__card
+          .Tasks__contents
+            .Tasks__startTime
+              %span.under
+                = task.start_at.strftime("%l:%M")
+            .Tasks__content
+              = link_to "/groups/#{@group.id}/tasks/#{task.id}/edit", method: :get, class: "Tasks__edit" do
+                %p.Tasks__name
+                  = task.name
+              = image_tag task.image.url, class: 'Tasks__image' if task.image.present?
+            .Tasks__timer
+              .Tasks__timer--moving.stopwatch{data: { timer: task.duration * 60}}
+              %button.Tasks__timer--btn.btn.btn-success.start
+                スタート
+              %button.Tasks__timer--btn.btn.btn-success.stop
+                ストップ
+              %button.Tasks__timer--btn.btn.btn-success.restart
+                はじめから
   .Buttons
     =link_to new_group_task_path, class: "Button__icon" do
       = icon('fas', 'plus', class: "Contents__icon--plus")
