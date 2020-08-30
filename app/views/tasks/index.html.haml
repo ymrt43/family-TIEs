@@ -19,7 +19,7 @@
                   = task.name
               = image_tag task.image.url, class: 'Tasks__image' if task.image.present?
             .Tasks__timer
-              .Tasks__timer--moving.stopwatch{data: { timer: task.duration * 60}}
+              .Tasks__timer--moving.stopwatch{data: { timer: task.duration * 60 + 1 }}
               %button.Tasks__timer--btn.btn.btn-success.start
                 スタート
               %button.Tasks__timer--btn.btn.btn-success.stop
